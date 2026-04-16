@@ -25,7 +25,11 @@ jobs:
         uses: ruby/setup-ruby@v1
         with:
           ruby-version: "3.2"
-          bundler-cache: true
+
+      - name: Install dependencies
+        run: |
+          bundle config set without 'development test'
+          bundle install
 
       - name: Build
         run: bundle exec middleman build
