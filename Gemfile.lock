@@ -24,6 +24,7 @@ GEM
     fast_blank (1.0.1)
     fastimage (2.4.1)
     ffi (1.17.4)
+    ffi (1.17.4-x86_64-linux)
     haml (6.4.0)
       temple (>= 0.8.2)
       thor
@@ -88,6 +89,8 @@ GEM
       racc (~> 1.4)
     nokogiri (1.13.10-x86_64-darwin)
       racc (~> 1.4)
+    nokogiri (1.13.10-x86_64-linux)
+      racc (~> 1.4)
     padrino-helpers (0.15.3)
       i18n (>= 0.6.7, < 2)
       padrino-support (= 0.15.3)
@@ -111,6 +114,8 @@ GEM
       rb-inotify (~> 0.9, >= 0.9.7)
     sassc (2.4.0)
       ffi (~> 1.9)
+    sassc (2.4.0-x86_64-linux)
+      ffi (~> 1.9)
     servolux (0.13.0)
     sprockets (4.2.2)
       concurrent-ruby (~> 1.0)
@@ -129,7 +134,7 @@ GEM
     zeitwerk (2.6.18)
 
 PLATFORMS
-  arm64-darwin-24
+  arm64-darwin
   x86_64-linux
 
 DEPENDENCIES
@@ -143,8 +148,6 @@ DEPENDENCIES
   sass
   webrick
 
-RUBY VERSION
-   ruby 3.2.0p0
 
 BUNDLED WITH
    2.2.22
