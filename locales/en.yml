@@ -1,0 +1,13 @@
+---
+en:
+    title: Vebit OpenAPI Docs
+    current: English
+    next: 中文
+    spot_http_url: openapi.zzvbxx.com
+    spot_http_url_bak: openapi.zzvbxx.net
+    futures_http_url: futuresopenapi.zzvbxx.com
+    futures_http_url_bak: futuresopenapi.zzvbxx.net
+    spot_ws_url: ws.zzvbxx.com
+    spot_ws_url_bak: ws.zzvbxx.net
+    futures_ws_url: futuresws.zzvbxx.com
+    futures_ws_url_bak: futuresws.zzvbxx.net
