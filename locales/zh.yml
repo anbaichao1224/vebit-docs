@@ -3,11 +3,11 @@ zh:
     title: Vebit OpenAPI文档
     current: Chinese
     next: English
-    spot_http_url: openapi.zzvbxx.com
-    spot_http_url_bak: openapi.zzvbxx.net
-    futures_http_url: futuresopenapi.zzvbxx.com
-    futures_http_url_bak: futuresopenapi.zzvbxx.net
-    spot_ws_url: ws.zzvbxx.com
-    spot_ws_url_bak: ws.zzvbxx.net
-    futures_ws_url: futuresws.zzvbxx.com
-    futures_ws_url_bak: futuresws.zzvbxx.net
+    spot_http_url: openapi.vebit.com
+    spot_http_url_bak: openapi.vebit.net
+    futures_http_url: futuresopenapi.vebit.com
+    futures_http_url_bak: futuresopenapi.vebit.net
+    spot_ws_url: ws.vebit.com
+    spot_ws_url_bak: ws.vebit.net
+    futures_ws_url: futuresws.vebit.com
+    futures_ws_url_bak: futuresws.vebit.net
