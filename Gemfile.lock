@@ -129,7 +129,8 @@ GEM
     zeitwerk (2.6.18)
 
 PLATFORMS
-  universal-darwin-24
+  arm64-darwin-24
+  x86_64-linux
 
 DEPENDENCIES
   middleman (~> 4.4)
@@ -143,7 +144,7 @@ DEPENDENCIES
   webrick
 
 RUBY VERSION
-   ruby 2.6.10p210
+   ruby 3.2.0p0
 
 BUNDLED WITH
    2.2.22
