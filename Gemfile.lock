@@ -86,7 +86,7 @@ GEM
     minitest (5.25.4)
     nokogiri (1.13.10-arm64-darwin)
       racc (~> 1.4)
-    nokogiri (1.13.10-x86_64-darwin)
+    nokogiri (1.13.10-x86_64-linux)
       racc (~> 1.4)
     padrino-helpers (0.15.3)
       i18n (>= 0.6.7, < 2)
@@ -130,6 +130,7 @@ GEM
 
 PLATFORMS
   universal-darwin-24
+  x86_64-linux
 
 DEPENDENCIES
   middleman (~> 4.4)
