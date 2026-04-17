@@ -46,7 +46,6 @@ activate :i18n, :mount_at_root => false, :locales => [:zh, :en]
 
 # Build Configuration
 configure :build do
-  activate :asset_hash, :exts => app.config[:asset_extensions] - %w[.woff .woff2]
   activate :minify_css
   activate :minify_javascript
 end
