@@ -1,21 +1,20 @@
 FROM ruby:3.1-slim
 
-WORKDIR /srv/slate
-
-EXPOSE 4567
-
-COPY Gemfile .
-
 RUN apt-get update \
     && apt-get install -y --no-install-recommends \
         build-essential \
         git \
         nodejs \
-    && gem install bundler \
-    && bundle install \
-    && apt-get remove -y build-essential git \
-    && apt-get autoremove -y \
     && rm -rf /var/lib/apt/lists/*
+
+RUN gem install bundler
+
+WORKDIR /srv/slate
+
+COPY Gemfile Gemfile.lock ./
+RUN bundle install
+
+EXPOSE 4567
 
 COPY . /srv/slate
 

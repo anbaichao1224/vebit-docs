@@ -23,11 +23,12 @@ jobs:
 
       - name: Build with Docker
         run: |
-          docker build -t vebit-docs .
+          docker build --progress=plain -t vebit-docs .
+          echo "Starting Middleman build..."
           docker run --rm \
             -v ${{ github.workspace }}:/srv/slate \
             -v ${{ github.workspace }}/build:/srv/slate/build \
-            vebit-docs bash -c "bundle exec middleman build --clean --verbose"
+            vebit-docs bash -c "set -x && bundle exec middleman build --clean --verbose 2>&1"
           # Fix permissions
           sudo chown -R $(id -u):$(id -g) build/
 
