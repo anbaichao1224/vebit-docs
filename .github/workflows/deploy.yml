@@ -36,8 +36,14 @@ jobs:
 
       - name: Build
         run: |
-          bundle exec middleman build --clean
+          bundle exec middleman build --clean --verbose 2>&1 | tee build-output.txt
         timeout-minutes: 10
+
+      - name: Show verbose errors
+        if: failure()
+        run: |
+          echo "=== Build output ==="
+          cat build-output.txt
 
       - name: Check build output
         run: |
