@@ -41,7 +41,6 @@ set :relative_links, true
 
 # Internationalization support
 activate :i18n, :mount_at_root => false, :locales => [:en, :zh]
-redirect "index.html", :to => "./zh/index.html"
 
 # Build Configuration
 configure :build do
