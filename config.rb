@@ -1,3 +1,5 @@
+require 'logger'
+
 # Unique header generation
 require './lib/unique_head.rb'
 
