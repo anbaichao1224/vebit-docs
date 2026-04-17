@@ -3,4 +3,3 @@ vendor/
 build/
 .git/
 *.gem
-Gemfile.lock
