@@ -31,11 +31,11 @@ end
 
 activate :sprockets
 
-activate :autoprefixer do |config|
-  config.browsers = ['last 2 version', 'Firefox ESR']
-  config.cascade  = false
-  config.inline   = true
-end
+# activate :autoprefixer do |config|
+#   config.browsers = ['last 2 version', 'Firefox ESR']
+#   config.cascade  = false
+#   config.inline   = true
+# end
 
 # Github pages require relative links
 activate :relative_assets
@@ -46,17 +46,10 @@ activate :i18n, :mount_at_root => true, :locales => [:en, :zh], :lang => :zh
 
 # Build Configuration
 configure :build do
-  # We do want to hash woff and woff2 as there's a bug where woff2 will use
-  # woff asset hash which breaks things. Trying to use a combination of ignore and
-  # rewrite_ignore does not work as it conflicts weirdly with relative_assets. Disabling
-  # the .woff2 extension only does not work as .woff will still activate it so have to
-  # have both. See https://github.com/slatedocs/slate/issues/1171 for more details.
-  activate :asset_hash, :exts => app.config[:asset_extensions] - %w[.woff .woff2]
-  # If you're having trouble with Middleman hanging, commenting
-  # out the following two lines has been known to help
-  activate :minify_css
-  activate :minify_javascript
-  # activate :gzip
+  # Disable asset_hash, minify_css, minify_javascript to fix build errors
+  # activate :asset_hash
+  # activate :minify_css
+  # activate :minify_javascript
 end
 
 # Deploy Configuration
