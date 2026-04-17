@@ -60,12 +60,12 @@ Internationalization (i18n) support.
       }
       <%= Rouge::Themes::Base16::Solarized.render(:scope => '.highlight') %>
     </style>
-    <link rel="stylesheet" href="../stylesheets/screen.css" media="screen">
-    <link rel="stylesheet" href="../stylesheets/print.css" media="print">
+    <%= stylesheet_link_tag :screen, media: :screen %>
+    <%= stylesheet_link_tag :print, media: :print %>
     <% if current_page.data.search %>
-      <script src="../javascripts/all.js" defer></script>
+      <%= javascript_include_tag "all" %>
     <% else %>
-      <script src="../javascripts/all_nosearch.js" defer></script>
+      <%= javascript_include_tag "all_nosearch" %>
     <% end %>
 
     <% if current_page.data.code_clipboard %>
