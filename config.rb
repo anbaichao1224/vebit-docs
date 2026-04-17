@@ -21,20 +21,13 @@ set :css_dir, 'stylesheets'
 set :js_dir, 'javascripts'
 set :images_dir, 'images'
 set :fonts_dir, 'fonts'
+set :sass, { style: :compressed, syntax: :scss }
 
 # Activate the syntax highlighter
 activate :syntax
 ready do
   require './lib/monokai_sublime_slate.rb'
   require './lib/multilang.rb'
-end
-
-activate :sprockets
-
-activate :autoprefixer do |config|
-  config.browsers = ['last 2 version', 'Firefox ESR']
-  config.cascade  = false
-  config.inline   = true
 end
 
 # Github pages require relative links
@@ -46,12 +39,9 @@ activate :i18n, :mount_at_root => false, :locales => [:zh, :en]
 
 # Build Configuration
 configure :build do
-  # activate :minify_css
-  # activate :minify_javascript
 end
 
 # Deploy Configuration
-# If you want Middleman to listen on a different port, you can set that below
 set :port, 4567
 
 helpers do
