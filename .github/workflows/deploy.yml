@@ -27,7 +27,7 @@ jobs:
           docker run --rm \
             -v ${{ github.workspace }}:/srv/slate \
             -v ${{ github.workspace }}/build:/srv/slate/build \
-            vebit-docs build
+            vebit-docs bash -c "bundle exec middleman build --clean --verbose"
           # Fix permissions
           sudo chown -R $(id -u):$(id -g) build/
 
