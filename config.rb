@@ -31,11 +31,11 @@ end
 
 activate :sprockets
 
-# activate :autoprefixer do |config|
-#   config.browsers = ['last 2 version', 'Firefox ESR']
-#   config.cascade  = false
-#   config.inline   = true
-# end
+activate :autoprefixer do |config|
+  config.browsers = ['last 2 version', 'Firefox ESR']
+  config.cascade  = false
+  config.inline   = true
+end
 
 # Github pages require relative links
 activate :relative_assets
@@ -46,10 +46,9 @@ activate :i18n, :mount_at_root => false, :locales => [:zh, :en]
 
 # Build Configuration
 configure :build do
-  # Disable asset_hash, minify_css, minify_javascript to fix build errors
-  # activate :asset_hash
-  # activate :minify_css
-  # activate :minify_javascript
+  activate :asset_hash, :exts => app.config[:asset_extensions] - %w[.woff .woff2]
+  activate :minify_css
+  activate :minify_javascript
 end
 
 # Deploy Configuration
