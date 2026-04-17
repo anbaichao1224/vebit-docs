@@ -21,14 +21,20 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Setup Ruby
-        uses: ruby/setup-ruby@v1
-        with:
-          ruby-version: '3.2'
-          bundler-cache: true
+      - name: Build with Slate Docker
+        run: |
+          docker run --rm \
+            -v ${{ github.workspace }}:/srv/slate \
+            -v ${{ github.workspace }}/build:/srv/slate/build \
+            slatedocs/slate:latest
+          # Fix permissions
+          sudo chown -R $(id -u):$(id -g) build/
 
-      - name: Build
-        run: bundle exec middleman build --clean
+      - name: Check build output
+        run: |
+          echo "Build contents:"
+          find build/ -name "*.html" | sort
+          echo "Total HTML files: $(find build/ -name "*.html" | wc -l)"
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
