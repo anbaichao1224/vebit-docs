@@ -46,8 +46,8 @@ activate :i18n, :mount_at_root => false, :locales => [:zh, :en]
 
 # Build Configuration
 configure :build do
-  activate :minify_css
-  activate :minify_javascript
+  # activate :minify_css
+  # activate :minify_javascript
 end
 
 # Deploy Configuration
