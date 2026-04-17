@@ -42,7 +42,7 @@ activate :relative_assets
 set :relative_links, true
 
 # Internationalization support
-activate :i18n, :mount_at_root => true, :locales => [:en, :zh]
+activate :i18n, :mount_at_root => false, :locales => [:zh, :en]
 
 # Build Configuration
 configure :build do
